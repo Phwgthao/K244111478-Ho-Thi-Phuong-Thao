@@ -44,35 +44,35 @@
 
         <form>
             <div class="row">
-                <label>First Name:</label>
-                <input type="text" name="firstname">
-                <label style="width:80px;">Last Name:</label>
-                <input type="text" name="lastname">
+                <label for="First_name">First Name:</label>
+                <input type="text" id="First_name" name="firstname">
+                <label for="Last_name" style="width:80px;">Last Name:</label>
+                <input type="text" id="Last_name" name="lastname">
             </div>
             <div class="row">
-                <label>Address #1:</label>
-                <input type="text" name="address1" size="40">
+                <label for="Address1">Address #1:</label>
+                <input type="text" id="Address1" name="address1" size="40">
             </div>
             <div class="row">
-                <label>Address #2:</label>
-                <input type="text" name="address2" size="40">
+                <label for="Address2">Address #2:</label>
+                <input type="text" id="Address2" name="address2" size="40">
             </div>
             <div class="row">
-                <label>City:</label>
-                <input type="text" name="city">
-                <label style="width:50px;">State:</label>
-                <input type="text" name="state" size="5">
-                <label style="width:30px;">Zip:</label>
-                <input type="text" name="zip" size="6">
+                <label for="City">City:</label>
+                <input type="text" id="City" name="city">
+                <label for="State" style="width:50px;">State:</label>
+                <input type="text" id="State" name="state" size="5">
+                <label for="Zip" style="width:30px;">Zip:</label>
+                <input type="text" id="Zip" name="zip" size="6">
             </div>
             <div class="row">
-                <label>Country:</label>
-                <input type="text" name="country" value="United States">
+                <label for="Country">Country:</label>
+                <input type="text" id="Country" name="country" value="United States">
             </div>
             <hr>
             <div class="row">
-                <label>Product:</label>
-                <select name="product">
+                <label for="Product">Product:</label>
+                <select id="Product" name="product">
                     <option>ScanMaster</option>
                     <option>PrinterPro</option>
                     <option>SmartCam</option>
@@ -80,18 +80,21 @@
                 </select>
             </div>
             <div class="row">
-                <label>Date Purchased:</label>
-                <input type="text" name="date">
+                <label for="Date_purchased">Date Purchased:</label>
+                <input type="date" id="Date_purchased" name="date">
             </div>
             <div class="row">
-                <label>Serial #:</label>
-                <input type="text" name="serial">
+                <label for="Serial">Serial #:</label>
+                <input type="text" id="Serial" name="serial">
             </div>
             <div class="row">
-                <label>Used for:</label><br>
-                <input type="radio" name="used" value="home"> Home
-                <input type="radio" name="used" value="business"> Business
-                <input type="radio" name="used" value="government"> Government
+                <label for="Used_for">Used for:</label><br>
+                <input type="radio" id="Home" name="used" value="home">
+                <label for="Home"> Home</label>
+                <input type="radio" id="Business" name="used" value="business">
+                <label for="Business"> Business</label>
+                <input type="radio" id="Government" name="used" value="government">
+                <label for="Government"> Government
                 <input type="radio" name="used" value="edu"> Educational Institution
                 <input type="radio" name="used" value="other"> Other
             </div>
