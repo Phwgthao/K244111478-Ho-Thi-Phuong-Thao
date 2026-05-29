@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Phương Thảo</title>
+    <style>
+        body {
+            background-color: #b3d9ff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #cce6ff;
+            border: 1px solid #333;
+        }
+        p {
+	        margin: 10px 0;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        .expense {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .expense th, .expense td {
+            border: 1px solid #999;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .expense th {
+            background-color: #bfefff;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .buttons input {
+            margin-right: 10px;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+
+        .note {
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div style="text-align:center;">
+                <img src="images/DeLong.jpg" alt="DeLong Electronics Logo" height="60">
+            </div>
+            <h3> Travel Expense Report</h3>
+        <hr style="border:1px solid #2e1616;">
+        <form>
+            <p> 1) First Name: <input type="text" name="firstname" size="15">
+                &nbsp;Last Name: <input type="text" name="lastname">
+            </p>
+            <p> 3) Social Security Number: <input type="text" name="ssn" size="15"></p>
+            <p> 4) Department: 
+                <select name="department">
+                    <option value="Accounting"> Accounting </option>
+                    <option value="Sales"> Sales </option>
+                    <option value="Marketing"> Marketing </option>
+                    <option value="IT"> IT </option>
+                </select>
+            </p>
+            <p> 5) Describe purpose of trip: <textarea name="purpose" rows="5" cols="60"></textarea></p>
+            <p>5) Itemize your travel expenses</p>
+            <table class="expense">
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td>
+                        <select>
+                            <option>Meal</option>
+                            <option>Hotel</option>
+                            <option>Transport</option>
+                        </select>
+                    </td>
+                    <td><input type="text" size="8"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td><select><option>Meal</option></select></td>
+                    <td><input type="text" size="8"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td><select><option>Meal</option></select></td>
+                    <td><input type="text" size="8"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" placeholder="mm/dd/yy"></td>
+                    <td><input type="text"></td>
+                    <td><select><option>Meal</option></select></td>
+                    <td><input type="text" size="8"></td>
+                </tr>
+            </table>
+
+            <p>6) Have you submitted your receipts? 
+                <label><input type="radio" name="receipt"> Yes</label>
+                <label><input type="radio" name="receipt"> No</label>
+            </p>
+
+            <div class="buttons">
+                <input 
+                    type="button" 
+                    value="Submit travel expenses" 
+                    onclick="alert('Travel expense report submitted successfully!')">
+                <input 
+                    type="reset" 
+                    value="Reset" 
+                    onclick="alert('All form data has been cleared.')">
+            </div>
+
+            <p class="note">
+                Questions? Contact Debbie Larson in Accounting (ext. 2150).
+            </p>
+        </form>
+    </div>
+</body>
+</html>
