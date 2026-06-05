@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Phương Thảo</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                margin: 20px auto;
+            }
+
+            tr,td {
+                border: none;
+                padding: 5px 15px;
+                text-align: center;
+            }
+
+            input {
+                width: 150px;
+                text-align: right;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            div {
+                width: 300px;
+                margin: 10px auto;
+                text-align: right;
+            }
+        </style>
+
+        <script>
+            function tinhTien() {
+                var qty1 = Number(document.getElementById("qty1").value);
+                var qty2 = Number(document.getElementById("qty2").value);
+                var qty3 = Number(document.getElementById("qty3").value);
+
+                var price1 = 19.95, price2 = 29.95, price3 = 39.95;
+
+                document.getElementById("total1").value = (qty1 * price1).toFixed(2);
+                document.getElementById("total2").value = (qty2 * price2).toFixed(2);
+                document.getElementById("total3").value = (qty3 * price3).toFixed(2);
+            }
+
+            function tongCong() {
+                var t1 = Number(document.getElementById("total1").value);
+                var t2 = Number(document.getElementById("total2").value);
+                var t3 = Number(document.getElementById("total3").value);
+                var tong = t1 + t2 + t3;
+                document.getElementById("tong").value = tong.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td><b>Part Number</b></td>
+                    <td><b>Description</b></td>
+                    <td><b>Price</b></td>
+                    <td><b>Qty</b></td>
+                    <td><b>Item table</b></td>
+                </tr>
+                <tr>
+                    <td>C112</td>
+                    <td>Mousse</td>
+                    <td>19.95$</td>
+                    <td><input id="qty1" type="text" onchange="tinhTien()"></td>
+                    <td><input id="total1" type="text" readonly></td>
+                </tr>
+                <tr>
+                    <td>B124</td>
+                    <td>Keyboard US</td>
+                    <td>29.95$</td>
+                    <td><input id="qty2" type="text" onchange="tinhTien()"></td>
+                    <td><input id="total2" type="text" readonly></td>
+                </tr>
+                <tr>
+                    <td>U125</td>
+                    <td>USB KingMax</td>
+                    <td>39.95$</td>
+                    <td><input id="qty3" type="text" onchange="tinhTien()"></td>
+                    <td><input id="total3" type="text" readonly></td>
+                </tr>
+            </table>
+
+            <div>
+                <label for="tong"><b>Total:</b></label>
+                <input id="tong" type="text" readonly>
+                <input type="button" value="Sum" onclick="tongCong()">
+            </div>
+        </form>
+
+    </body>
+</html>
